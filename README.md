@@ -7,7 +7,15 @@ Home: https://github.com/probabl-ai/skore
 
 Package license: MIT
 
-Summary: Tooling and assistance for data scientists to "Own Your Data Science"
+Summary: Your scikit-learn Modeling Companion
+
+Development: https://github.com/probabl-ai/skore
+
+Documentation: https://skore.probabl.ai
+
+skore helps data scientists focus on what matters: building
+impactful models with hindsight and clarity.
+
 
 Current build status
 ====================
