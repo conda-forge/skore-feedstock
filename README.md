@@ -13,7 +13,7 @@ Development: https://github.com/probabl-ai/skore
 
 Documentation: https://skore.probabl.ai
 
-skore helps data scientists focus on what matters: building
+Skore helps data scientists focus on what matters: building
 impactful models with hindsight and clarity.
 
 
