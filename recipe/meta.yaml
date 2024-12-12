@@ -14,7 +14,7 @@ build:
     - skore = skore.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -45,7 +45,7 @@ about:
   home: https://github.com/probabl-ai/skore
   summary: Your scikit-learn Modeling Companion
   description: |
-    skore helps data scientists focus on what matters: building
+    Skore helps data scientists focus on what matters: building
     impactful models with hindsight and clarity.
   doc_url: https://skore.probabl.ai
   dev_url: https://github.com/probabl-ai/skore
