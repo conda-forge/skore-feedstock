@@ -157,3 +157,4 @@ Feedstock Maintainers
 * [@sylvaincom](https://github.com/sylvaincom/)
 * [@thomass-dev](https://github.com/thomass-dev/)
 * [@tuscland](https://github.com/tuscland/)
+
