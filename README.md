@@ -7,7 +7,7 @@ Home: https://github.com/probabl-ai/skore
 
 Package license: MIT
 
-Summary: The scikit-learn Modeling Companion
+Summary: the scikit-learn sidekick
 
 Development: https://github.com/probabl-ai/skore
 

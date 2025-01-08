@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://github.com/probabl-ai/skore
-  summary: The scikit-learn Modeling Companion
+  summary: the scikit-learn sidekick
   description: |
     Skore helps data scientists focus on what matters: building
     impactful models with hindsight and clarity.
