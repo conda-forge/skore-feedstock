@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 8db1b44eca52622830f6d27e869098705c9fd23bb5158dced7b5d77c8151e124
+  sha256: 28a34803660f22802cdb2717d449a84483c9e758af1a30e2764b6fef2c9bfaae
 
 build:
   entry_points:
