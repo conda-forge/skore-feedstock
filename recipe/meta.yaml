@@ -28,8 +28,11 @@ requirements:
     - joblib
     - matplotlib-base
     - numpy
+    - orjson
     - pandas
+    - platformdirs
     - plotly >=5,<6
+    - psutil
     - pyarrow
     - rich
     - scikit-learn
