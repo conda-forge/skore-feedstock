@@ -36,6 +36,8 @@ requirements:
     - pyarrow
     - rich
     - scikit-learn
+    # Need to pin sqlite for compatibility reason with diskcache
+    # cf. https://github.com/probabl-ai/skore/issues/1353
     - sqlite <3.49
     - skops
     - uvicorn
