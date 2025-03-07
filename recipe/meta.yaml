@@ -14,7 +14,7 @@ build:
     - skore = skore.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -36,6 +36,9 @@ requirements:
     - pyarrow
     - rich
     - scikit-learn
+    # Need to pin sqlite for compatibility reason with diskcache
+    # cf. https://github.com/probabl-ai/skore/issues/1353
+    - sqlite <3.49
     - skops
     - uvicorn
 
