@@ -36,6 +36,7 @@ requirements:
     - pyarrow
     - rich
     - scikit-learn
+    - sqlite <3.49
     - skops
     - uvicorn
 
