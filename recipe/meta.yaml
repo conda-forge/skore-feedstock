@@ -10,11 +10,9 @@ source:
   sha256: ea83a9fa2702e956c78e7ab3bea09ad4ed2c63b024cf81ba93c788727c1ce00b
 
 build:
-  entry_points:
-    - skore = skore.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -40,7 +38,6 @@ test:
     - skore
   commands:
     - pip check
-    - skore --help
   requires:
     - python {{ python_min }}
     - pip
