@@ -22,25 +22,18 @@ requirements:
     - hatchling
     - pip
   run:
-    - python >={{ python_min }}
     - diskcache
-    - fastapi
     - joblib
     - matplotlib-base
     - numpy
-    - orjson
     - pandas
-    - platformdirs
-    - plotly >=5,<6
-    - psutil
-    - pyarrow
+    - python >={{ python_min }}
     - rich
     - scikit-learn
+    - skops
     # Need to pin sqlite for compatibility reason with diskcache
     # cf. https://github.com/probabl-ai/skore/issues/1353
     - sqlite <3.49
-    - skops
-    - uvicorn
 
 test:
   imports:
