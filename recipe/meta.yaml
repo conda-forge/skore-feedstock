@@ -10,19 +10,21 @@ source:
   sha256: 35196ed84d2ffc07a59aeec8fc0c118dcc0c4b636570f01ddc7cf81e07b54ee9
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
+  build:
+    - python
   host:
     - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - IPython
     - anywidget
+    - importlib-metadata  # [py<=39]
     - ipywidgets
     - joblib
     - matplotlib-base
@@ -31,14 +33,14 @@ requirements:
     - plotly
     - rich
     - scikit-learn
-    - skore-local-project
     - skore-hub-project
+    - skore-local-project
 
 test:
   imports:
     - skore
-    - skore_local_project
     - skore_hub_project
+    - skore_local_project
   commands:
     - pip check
   requires:
