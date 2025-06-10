@@ -151,9 +151,9 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@MarieSacksick](https://github.com/MarieSacksick/)
 * [@auguste-probabl](https://github.com/auguste-probabl/)
 * [@glemaitre](https://github.com/glemaitre/)
+* [@mariesacksick](https://github.com/mariesacksick/)
 * [@sylvaincom](https://github.com/sylvaincom/)
 * [@thomass-dev](https://github.com/thomass-dev/)
 * [@tuscland](https://github.com/tuscland/)
