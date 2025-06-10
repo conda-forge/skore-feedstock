@@ -1,5 +1,6 @@
 {% set name = "skore" %}
 {% set version = "0.9.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -10,21 +11,19 @@ source:
   sha256: 35196ed84d2ffc07a59aeec8fc0c118dcc0c4b636570f01ddc7cf81e07b54ee9
 
 build:
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
-  build:
-    - python
   host:
     - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - IPython
     - anywidget
-    - importlib-metadata  # [py<=39]
     - ipywidgets
     - joblib
     - matplotlib-base
