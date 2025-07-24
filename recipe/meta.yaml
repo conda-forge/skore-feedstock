@@ -32,8 +32,10 @@ requirements:
     - plotly
     - rich
     - scikit-learn
+    - seaborn
     - skore-hub-project
     - skore-local-project
+    - skrub
 
 test:
   imports:
