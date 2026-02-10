@@ -30,11 +30,11 @@ requirements:
     - numpy
     - pandas
     - plotly
-    - rich
+    - rich >=14.1
     - scikit-learn
     - seaborn
-    - skore-hub-project
-    - skore-local-project
+    - skore-hub-project >=0.0.16
+    - skore-local-project >=0.0.4
     - skrub
 
 test:
