@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.11.7" %}
+{% set version = "0.12.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 9c9544f83a50e7dfb8777c37aaf7a701dfbcaa155d9027188b94952ee06e7e87
+  sha256: c5bc30795f20881e57e7ffd54d43cad4859a28eaff9a4c24edc06d3638399704
 
 build:
   noarch: python
@@ -30,11 +30,11 @@ requirements:
     - numpy
     - pandas
     - plotly
-    - rich
+    - rich >=14.1
     - scikit-learn
     - seaborn
-    - skore-hub-project
-    - skore-local-project
+    - skore-hub-project >=0.0.16
+    - skore-local-project >=0.0.4
     - skrub
 
 test:
