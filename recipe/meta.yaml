@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: c5bc30795f20881e57e7ffd54d43cad4859a28eaff9a4c24edc06d3638399704
+  sha256: f8a0256c9e6c3dffdef5110d33758ef1f519e6ae2ce6cecb1b93bc1472c6e2b4
 
 build:
   noarch: python
@@ -25,15 +25,16 @@ requirements:
     - IPython
     - anywidget
     - ipywidgets
+    - jinja2
     - joblib
     - matplotlib-base
     - numpy
     - pandas
     - plotly
-    - rich >=14.1
+    - rich >=14.2
     - scikit-learn
     - seaborn
-    - skore-hub-project >=0.0.16
+    - skore-hub-project >=0.0.17
     - skore-local-project >=0.0.4
     - skrub
 
@@ -52,8 +53,9 @@ about:
   home: https://github.com/probabl-ai/skore
   summary: the scikit-learn sidekick
   description: |
-    Skore helps data scientists focus on what matters: building
-    impactful models with hindsight and clarity.
+    Track Your Data Science.
+    Skore's open-source Python library accelerates ML model development with automated evaluation reports,
+    smart methodological guidance, and comprehensive cross-validation analysis.
   doc_url: https://skore.probabl.ai
   dev_url: https://github.com/probabl-ai/skore
   license: MIT
@@ -63,6 +65,5 @@ extra:
   recipe-maintainers:
     - auguste-probabl
     - glemaitre
-    - mariesacksick
     - thomass-dev
     - tuscland
