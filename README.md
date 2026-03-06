@@ -13,8 +13,9 @@ Development: https://github.com/probabl-ai/skore
 
 Documentation: https://skore.probabl.ai
 
-Skore helps data scientists focus on what matters: building
-impactful models with hindsight and clarity.
+Track Your Data Science.
+Skore's open-source Python library accelerates ML model development with automated evaluation reports,
+smart methodological guidance, and comprehensive cross-validation analysis.
 
 
 Current build status
@@ -153,7 +154,6 @@ Feedstock Maintainers
 
 * [@auguste-probabl](https://github.com/auguste-probabl/)
 * [@glemaitre](https://github.com/glemaitre/)
-* [@mariesacksick](https://github.com/mariesacksick/)
 * [@thomass-dev](https://github.com/thomass-dev/)
 * [@tuscland](https://github.com/tuscland/)
 
