@@ -34,8 +34,9 @@ requirements:
     - rich >=14.2
     - scikit-learn
     - seaborn
-    - skore-hub-project >=0.0.17
-    - skore-local-project >=0.0.4
+    - skore-hub-project >=0.0.18
+    - skore-local-project >=0.0.5
+    - skore-mlflow-project >=0.0.2
     - skrub
 
 test:
@@ -43,6 +44,7 @@ test:
     - skore
     - skore_hub_project
     - skore_local_project
+    - skore_mlflow_project
   commands:
     - pip check
   requires:
