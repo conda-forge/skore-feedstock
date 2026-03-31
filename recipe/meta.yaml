@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -36,7 +36,7 @@ requirements:
     - seaborn
     - skore-hub-project >=0.0.18
     - skore-local-project >=0.0.5
-    - skore-mlflow-project >=0.0.2
+    - skore-mlflow-project >=0.0.3
     - skrub
 
 test:
