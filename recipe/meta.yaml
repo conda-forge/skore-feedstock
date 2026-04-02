@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 3c57c9a5f1b671186e57c17fee939a517fd4deef3c785e33e19ba1f0c286115a
+  sha256: d6699718aec1aef8136ca6184e047b408866e2955979f0846757aa1c414ac259
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -34,7 +34,7 @@ requirements:
     - rich >=14.2
     - scikit-learn
     - seaborn
-    - skore-hub-project >=0.0.18
+    - skore-hub-project >=0.0.21
     - skore-local-project >=0.0.5
     - skore-mlflow-project >=0.0.3
     - skrub
