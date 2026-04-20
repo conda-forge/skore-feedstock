@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: d6699718aec1aef8136ca6184e047b408866e2955979f0846757aa1c414ac259
+  sha256: 0f46eaf42698da64adbd5b9ba5fcb7a45f89da9f19496c7613813b9541ffadeb
 
 build:
   noarch: python
