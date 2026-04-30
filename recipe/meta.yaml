@@ -35,7 +35,7 @@ requirements:
     - scikit-learn
     - seaborn
     - skore-hub-project >=0.0.21
-    - skore-local-project >=0.0.5
+    - skore-local-project >=0.0.8
     - skore-mlflow-project >=0.0.3
     - skrub
 
