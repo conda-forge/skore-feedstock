@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.17.0" %}
+{% set version = "0.18.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,9 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 725801cf89a27c0fb190c3e09aa75b45e125737374273c7c3a2a5c79459f468b
+  sha256: 535dc63fac53cfdcd38fd03a4f36c2b28e98abe7ba49fdb557c596ab524f7a15
 
 build:
+  entry_points:
+    - skore.plugins.project.local = skore._plugins.local:Project
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -24,18 +26,19 @@ requirements:
     - python >={{ python_min }}
     - IPython
     - anywidget
+    - diskcache
     - ipywidgets
     - jinja2
     - joblib
     - matplotlib-base
     - numpy
     - pandas
+    - platformdirs
     - plotly
     - rich >=14.2
     - scikit-learn
     - seaborn
-    - skore-hub-project >=0.0.21
-    - skore-local-project >=0.0.8
+    - skore-hub-project >=0.0.23
     - skore-mlflow-project >=0.0.3
     - skrub
 
@@ -43,7 +46,6 @@ test:
   imports:
     - skore
     - skore_hub_project
-    - skore_local_project
     - skore_mlflow_project
   commands:
     - pip check
