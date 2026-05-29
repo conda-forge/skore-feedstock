@@ -27,26 +27,27 @@ requirements:
     - IPython
     - anywidget
     - diskcache
+    - httpx
     - ipywidgets
     - jinja2
     - joblib
     - matplotlib-base
+    - mlflow >=2.20.4
     - numpy
+    - orjson
     - pandas
     - platformdirs
     - plotly
+    - pydantic
     - rich >=14.2
     - scikit-learn
+    - scipy
     - seaborn
-    - skore-hub-project >=0.0.23
-    - skore-mlflow-project >=0.0.3
     - skrub
 
 test:
   imports:
     - skore
-    - skore_hub_project
-    - skore_mlflow_project
   commands:
     - pip check
   requires:
