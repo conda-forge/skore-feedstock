@@ -42,7 +42,7 @@ requirements:
     - scikit-learn
     - scipy
     - seaborn
-    - skrub >= 0.9
+    - skrub >=0.9
 
 test:
   imports:
