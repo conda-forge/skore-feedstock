@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: dbf03f81485ef0c5fa40e7cc7c46a97b0bc48a27c74794112c60b0631a24a718
+  sha256: 9cf4034a5f351e2b6cb6d2a69b8d1ad5d30e8a7411473a3a084b6b269f33dd35
 
 build:
   entry_points:
@@ -25,7 +25,6 @@ requirements:
   run:
     - python >={{ python_min }}
     - IPython
-    - anywidget
     - diskcache
     - httpx
     - ipywidgets
@@ -43,7 +42,7 @@ requirements:
     - scikit-learn
     - scipy
     - seaborn
-    - skrub
+    - skrub >=0.9
 
 test:
   imports:
