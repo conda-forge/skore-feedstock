@@ -12,7 +12,13 @@ source:
 
 build:
   entry_points:
+    # login
+    - skore.plugins.login.hub = skore._plugins.hub.authentication.login:login
+    # Project
     - skore.plugins.project.local = skore._plugins.local:Project
+    - skore.plugins.project.hub = skore._plugins.hub.project.project:Project
+    - skore.plugins.project.mlflow = skore._plugins.mlflow:Project
+
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
