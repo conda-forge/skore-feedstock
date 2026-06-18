@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,11 +8,17 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 9cf4034a5f351e2b6cb6d2a69b8d1ad5d30e8a7411473a3a084b6b269f33dd35
+  sha256: 2ebbee49ca742027e754e875ba79bdb7a4ff0e17b1ecc600b38d11a336614356
 
 build:
   entry_points:
+    # login
+    - skore.plugins.login.hub = skore._plugins.hub.authentication.login:login
+    # Project
     - skore.plugins.project.local = skore._plugins.local:Project
+    - skore.plugins.project.hub = skore._plugins.hub.project.project:Project
+    - skore.plugins.project.mlflow = skore._plugins.mlflow:Project
+
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
