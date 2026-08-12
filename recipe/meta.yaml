@@ -36,7 +36,7 @@ requirements:
     - jinja2
     - joblib
     - matplotlib-base
-    - mlflow >=2.20.4
+    - mlflow <4,>=3.0.0
     - narwhals >=2.0.1
     - numpy
     - orjson
