@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.23.1" %}
+{% set version = "0.24.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: ddf8805bf7d286ecf96621f06e1358b15771e9a41314ebd82221474b13f5020c
+  sha256: c33e07d9624475c5dcff8244e5bcf4ce47b9aa172cc72ae282fd94305c9d6154
 
 build:
   entry_points:
@@ -31,13 +31,13 @@ requirements:
   run:
     - python >={{ python_min }}
     - IPython
-    - diskcache
     - httpx
     - ipywidgets
     - jinja2
     - joblib
     - matplotlib-base
     - mlflow >=2.20.4
+    - narwhals >=2.0.1
     - numpy
     - orjson
     - pandas
@@ -48,8 +48,9 @@ requirements:
     - scikit-learn
     - scipy
     - seaborn
-    - skrub >=0.9
+    - skrub >=0.10
     - skore-cli
+    - uuid6 >=2025.0.0  # [py < 314]
 
 test:
   imports:
