@@ -19,7 +19,6 @@ build:
     - skore.plugins.project.hub = skore._plugins.hub.project.project:Project
     - skore.plugins.project.mlflow = skore._plugins.mlflow:Project
 
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
