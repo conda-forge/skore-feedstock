@@ -19,6 +19,7 @@ build:
     - skore.plugins.project.hub = skore._plugins.hub.project.project:Project
     - skore.plugins.project.mlflow = skore._plugins.mlflow:Project
 
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -49,7 +50,7 @@ requirements:
     - seaborn
     - skrub >=0.10
     - skore-cli
-    - uuid6 >=2025.0.0  # [py < 314]
+    - uuid6 >=2025.0.0
 
 test:
   imports:
