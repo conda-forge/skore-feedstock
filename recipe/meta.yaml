@@ -30,27 +30,31 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - IPython
-    - httpx
-    - ipywidgets
+    # skore
     - jinja2
-    - joblib
+    - joblib >=1.4
     - matplotlib-base
-    - mlflow >=3.0.0
     - narwhals >=2.0.1
     - numpy
-    - orjson
+    - packaging >=24.2
     - pandas
-    - platformdirs
     - plotly
-    - pydantic
     - rich >=14.2
     - scikit-learn
-    - scipy
     - seaborn
-    - skrub >=0.10
     - skore-cli
-    - uuid6 >=2025.0.0
+    - skrub >=0.10
+    - uuid6 >=2025.0
+    # skore[jupyter]
+    - IPython
+    # skore[hub]
+    - httpx
+    - ipywidgets
+    - orjson
+    - pydantic
+    - scipy
+    # skore[mlflow]
+    - mlflow >=3.0
 
 test:
   imports:
