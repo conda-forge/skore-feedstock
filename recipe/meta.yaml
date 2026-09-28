@@ -1,6 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.25.0" %}
-{% set python_min = "3.11" %}
+{% set version = "0.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 17768c2334c68610fd72a02c224c2bf618d075e7f8ba0b69aca09233495f909b
+  sha256: 0e5fd65027642fa654a286fca54d36037edd27468454cc7995f2ced5ce64a9a5
 
 build:
   entry_points:
@@ -30,27 +29,31 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - IPython
-    - httpx
-    - ipywidgets
+    # skore
     - jinja2
-    - joblib
+    - joblib >=1.4
     - matplotlib-base
-    - mlflow >=3.0.0
     - narwhals >=2.0.1
     - numpy
-    - orjson
+    - packaging >=24.2
     - pandas
-    - platformdirs
     - plotly
-    - pydantic
     - rich >=14.2
     - scikit-learn
-    - scipy
     - seaborn
-    - skrub >=0.10
     - skore-cli
-    - uuid6 >=2025.0.0
+    - skrub >=0.10
+    - uuid6 >=2025.0
+    # skore[jupyter]
+    - IPython
+    # skore[hub]
+    - httpx
+    - ipywidgets
+    - orjson
+    - pydantic
+    - scipy
+    # skore[mlflow]
+    - mlflow >=3.0
 
 test:
   imports:
