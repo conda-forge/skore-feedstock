@@ -41,17 +41,19 @@ requirements:
     - rich >=14.2
     - scikit-learn
     - seaborn
-    - skore-cli
     - skrub >=0.10
     - uuid6 >=2025.0
     # skore[jupyter]
     - IPython
     # skore[hub]
+    - filelock
     - httpx
     - ipywidgets
+    - keyring >=25.7
     - orjson
     - pydantic
     - scipy
+    - skore-cli
     # skore[mlflow]
     - mlflow >=3.0
 
