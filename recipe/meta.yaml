@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.26.0" %}
+{% set version = "0.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: 0e5fd65027642fa654a286fca54d36037edd27468454cc7995f2ced5ce64a9a5
+  sha256: b4042133d99c912e9435d4625479b61997cc94df0383cc6224a1af7bd975a264
 
 build:
   entry_points:
