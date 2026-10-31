@@ -1,5 +1,5 @@
 {% set name = "skore" %}
-{% set version = "0.27.0" %}
+{% set version = "0.28.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/skore-{{ version }}.tar.gz
-  sha256: b4042133d99c912e9435d4625479b61997cc94df0383cc6224a1af7bd975a264
+  sha256: c3681fc4fa7a7308e01f459b50b5357702e2134bbce91658846ebe1ac70e0538
 
 build:
   entry_points:
-    # login
-    - skore.plugins.login.hub = skore._plugins.hub.authentication.login:login
+    # CLI
+    - skore = skore._cli:cli
     # Project
     - skore.plugins.project.local = skore._plugins.local:Project
     - skore.plugins.project.hub = skore._plugins.hub.project.project:Project
@@ -30,6 +30,7 @@ requirements:
   run:
     - python >={{ python_min }}
     # skore
+    - click
     - jinja2
     - joblib >=1.4
     - matplotlib-base
@@ -39,29 +40,34 @@ requirements:
     - pandas
     - plotly
     - rich >=14.2
+    - rich-click >=1.9
     - scikit-learn
     - seaborn
+    # skore-skills is a hard dependency of the `skore` CLI (skore._cli.skills)
+    - skore-skills
     - skrub >=0.10
+    - textual
     - uuid6 >=2025.0
     # skore[jupyter]
     - IPython
     # skore[hub]
     - filelock
     - httpx
-    - ipywidgets
     - keyring >=25.7
     - orjson
     - pydantic
     - scipy
-    - skore-cli
+    # rich[jupyter], pulled in by skore[hub]
+    - ipywidgets
     # skore[mlflow]
-    - mlflow >=3.0
+    - mlflow >=3
 
 test:
   imports:
     - skore
   commands:
     - conda doctor
+    - skore --help
   requires:
     - python {{ python_min }}
     - conda
